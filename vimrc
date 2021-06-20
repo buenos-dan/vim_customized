@@ -57,6 +57,7 @@ autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(win
 colorscheme one
 
 " ================================  coc config ===============================
+let g:coc_disable_startup_warning = 1
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
