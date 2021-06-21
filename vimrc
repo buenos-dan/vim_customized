@@ -26,11 +26,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'preservim/nerdtree'             " 文件结构导航栏
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'octol/vim-cpp-enhanced-highlight'
 
-Plug 'rakr/vim-one'                   " 配色方案
+" Plug 'rakr/vim-one'                   " 配色方案
 
 Plug 'tpope/vim-surround'             " 括号配对
 
@@ -54,33 +54,33 @@ nnoremap <Leader>t :NERDTreeToggle<CR>
 "自动退出
 autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
 
-colorscheme one
+" colorscheme one
 
 " ================================  coc config ===============================
-let g:coc_disable_startup_warning = 1
-" use <tab> for trigger completion and navigate to the next complete item
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-
-inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
-      \ coc#refresh()
-
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
-" Symbol renaming.
-" nmap <leader>rn <Plug>(coc-rename)
+" let g:coc_disable_startup_warning = 1
+" " use <tab> for trigger completion and navigate to the next complete item
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~ '\s'
+" endfunction
+"
+" inoremap <silent><expr> <Tab>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<Tab>" :
+"       \ coc#refresh()
+"
+" " GoTo code navigation.
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
+"
+" " Formatting selected code.
+" xmap <leader>f  <Plug>(coc-format-selected)
+" nmap <leader>f  <Plug>(coc-format-selected)
+"
+" " Symbol renaming.
+" " nmap <leader>rn <Plug>(coc-rename)
 
 " ========================= nerd commenter config ============================
  " Create default mappings
