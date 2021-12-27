@@ -44,6 +44,8 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'vimwiki/vimwiki'
 
+Plug 'dracula/vim'
+
 call plug#end()
 
 filetype plugin indent on
@@ -55,6 +57,8 @@ nnoremap <Leader>t :NERDTreeToggle<CR>
 autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
 
 " colorscheme one
+colorscheme dracula
+" colorscheme_bg = "dark"
 
 " ================================  coc config ===============================
 " let g:coc_disable_startup_warning = 1

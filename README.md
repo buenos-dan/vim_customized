@@ -1,9 +1,10 @@
 # my vim configuration
 ## quick start
 ``` 
+cd ~/
 git clone this repository
-cp .vimrc ~/
-cp -r .vim/ ~/
+mv vim_customed .vim
+
 vim                 //open vim
 :PlugInstall      // install plugin
 ```
@@ -15,3 +16,4 @@ vim                 //open vim
 4. nerd-commenter
 5. ctrlp-vim
 6. vim-repeat
+7. vim      // dark color theme
